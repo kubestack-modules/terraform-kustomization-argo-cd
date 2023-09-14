@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: argocd
+commonAnnotations:
+  app.kubernetes.io/managed-by: kubestack
+  app.kubernetes.io/version: v2.8.4
+  catalog.kubestack.com/heritage: kubestack.com/catalog/argo-cd
+  catalog.kubestack.com/variant: normal
+resources:
+- namespace.yaml
+- install.yaml
